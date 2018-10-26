@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "eventportal-web"
+  "defaultProject": "eventportal-web",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
