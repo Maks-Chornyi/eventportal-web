@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {EventPageComponent} from '../event-page/event-page.component';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input() event;
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
+  }
+
+  OnClick(id) {
+    this.route.navigate(['event' , id]);
   }
 
 }
