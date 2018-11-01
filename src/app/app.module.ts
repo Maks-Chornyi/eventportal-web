@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { EventPageComponent } from './event-page/event-page.component';
 import { CardComponent } from './card/card.component';
 import { AppRoutingModule } from './app-routing.module';
-import {RouterModule} from '@angular/router';
+import { RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FormsModule} from '@angular/forms';
+import { HttpModule} from '@angular/http';
 
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +26,9 @@ const routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

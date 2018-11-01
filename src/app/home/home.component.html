@@ -1,3 +1,24 @@
+
+    <form class="col s12" name="loh">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Title of event" id="title" type="text" class="validate" [(ngModel)]="title" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Description of event" id="description" type="text" class="validate" [(ngModel)]="description" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="Image URL" id="imageUrl" type="text" class="validate" [(ngModel)]="imageUrl" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="Place" id="place" type="text" class="validate" [(ngModel)]="place" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" (click)="addNewEvent()">Add new Event</button>
+        </div>
+      </div>
+    </form>
+
 <div class="row">
-<app-card></app-card>
+  <app-card></app-card>
 </div>
