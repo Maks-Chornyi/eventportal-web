@@ -1,11 +1,11 @@
-  <div class="col s5">
+  <div class="col s4">
     <div class="card" (click)="OnClick(event.id)">
       <div class="card-image">
-        <img src={{event.imageUrl}}>
+        <img src={{event.imageUrl}} width="250" height="250">
       </div>
       <div class="card-content">
         <span class="card-title">{{event.title}}</span>
-        <p>I am a very simple card. I am good at containing small bits of information.</p>
+        <p>{{event.description}}</p>
       </div>
     </div>
   </div>
