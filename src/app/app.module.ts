@@ -8,12 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule} from '@angular/forms';
-import { HttpModule} from '@angular/http';
+import {Http, HttpModule} from '@angular/http';
 
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  {path: 'event', component: EventPageComponent}
+  {path: 'event/:id', component: EventPageComponent}
 ]
 
 @NgModule({
@@ -21,7 +21,7 @@ const routes = [
     AppComponent,
     EventPageComponent,
     CardComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

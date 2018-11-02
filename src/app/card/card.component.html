@@ -1,10 +1,10 @@
-  <div class="col s4">
-    <div class="card">
+  <div class="col s5">
+    <div class="card" (click)="OnClick(event.id)">
       <div class="card-image">
-        <img src="https://ae01.alicdn.com/kf/HTB1JzNjOXXXXXXVXXXXq6xXFXXXB/Bela-paisagem-do-lago-de-montanha-de-neve-nuvens-Tadjiquist-o-4-Tamanhos-de-gua-azul.jpg_640x640.jpg">
+        <img src={{event.imageUrl}}>
       </div>
       <div class="card-content">
-        <span class="card-title">Card Title</span>
+        <span class="card-title">{{event.title}}</span>
         <p>I am a very simple card. I am good at containing small bits of information.</p>
       </div>
     </div>

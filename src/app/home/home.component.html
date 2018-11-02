@@ -20,5 +20,10 @@
     </form>
 
 <div class="row">
-  <app-card></app-card>
+
+  <app-card
+    *ngFor="let event of events"
+    [event]="event"
+  ></app-card>
+
 </div>
