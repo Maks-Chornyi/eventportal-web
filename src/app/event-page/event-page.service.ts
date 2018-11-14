@@ -1,6 +1,7 @@
 import {Http} from '@angular/http';
 import {Injectable} from '@angular/core';
 import {map} from 'rxjs/operators';
+import {Event} from '../Event';
 
 @Injectable()
 export class EventPageService {
@@ -21,5 +22,9 @@ export class EventPageService {
           place: event.place
         };
       }));
+  }
+  deleteEvent(event: Event) {
+    this.http.delete('/api/event/' + event.id).subscribe(response =>
+    console.log(response));
   }
 }

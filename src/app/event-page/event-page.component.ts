@@ -24,4 +24,8 @@ export class EventPageComponent implements OnInit {
     return this.eventService.getEventById(id).subscribe( event =>
     this.event = event );
   }
+
+  onDelete(event: Event) {
+    this.eventService.deleteEvent(event);
+  }
 }
